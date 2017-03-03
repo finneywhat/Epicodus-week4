@@ -17,7 +17,8 @@
         </h4>
       </div>
     </div>
-    <div class="container mid-section" id="pics">
+
+    <div class="container-fluid mid-section" id="pics">
       <div class="row">
         <h1>We use only the freshest ingredients for our pies</h1>
         <div class="col-md-6 left-col">
@@ -31,10 +32,10 @@
       </div>
     </div>
 
-    <div class="container mid-section">
-      <div class="row">
+    <div class="container-fluid mid-section">
+      <div class="row mid-row">
         <div class="col-md-6 left-col">
-          <h3 class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</h3>
+          <h3 class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h3>
         </div>
         <div class="col-md-6 right-col">
           <img src="img/veggie-toppings.jpg" alt="pizza toppings" />
@@ -42,7 +43,7 @@
       </div>
     </div>
 
-    <div class="container mid-section">
+    <div class="container-fluid mid-section" id="last-row">
       <div class="row">
         <div class="col-md-6 left-col">
           <img src="img/meat-toppings.jpg" alt="meat toppings" />
@@ -54,6 +55,7 @@
     </div>
 
     <div class="container-fluid pizza-form">
+      <h1>Online pizza order</h1>
       <form id="order-form">
         <label for="size">First step: select a size</label>
         <select class="form-control" id="size">
@@ -92,6 +94,7 @@
       </form>
       <form id="pay-form">
         <label for="size" id="payment-info">Payment Information</label>
+        <p>Your total today is $<span id="user-pizza-price"></span></p>
         <p>Choose your payment method</p>
         <select class="form-control" id="size">
           <option value=""><br>
@@ -115,7 +118,7 @@
         </div>
       <div id="order-results" class="well">
         <p>
-          Thank you for your order.<br>Based on your selections, your total price is $<span id="user-pizza-price"></span>.
+          Thank you for your order.<br>The total price for your <span id="user-size"></span> pizza is $<span id="user-pizza-price1"></span>.
         </p>
         <button type="button" class="btn btn-success" id="pay-btn">Pay Now</button>
       </div>

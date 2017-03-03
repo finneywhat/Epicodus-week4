@@ -7,8 +7,7 @@
 }
 .jumbotron h1 {
   padding-top: 100px;
-  width: 30%;
-  text-align: left;
+  font-size: 80px;
   margin: auto;
   color: white;
   text-shadow: 0 4px 9px black;
@@ -19,12 +18,8 @@ h4 {
   text-shadow: 0 4px 6px black;
 }
 
-/*#pics {
-  margin-top: 40px;
-}*/
-
 .mid-section {
-  height: 400px;
+  height: 500px;
   margin-bottom: 10px;
 }
 
@@ -45,25 +40,40 @@ h4 {
   text-align: left;
 }
 
+.mid-row {
+  background-image: url("../img/wood.jpeg");
+  background-position: right;
+  margin-top: 40px;
+  padding: 100px 0;
+  color: black;
+}
+
+#last-row {
+  margin-top: 100px;
+  padding: 90px 0;
+}
+
 .description {
-  width: 100%;
+  width: 80%;
+  margin-top: 50px;
 }
 
 .pizza-form {
   background-image: url("../img/pizza-background-1.png");
   background-position: top;
   color: white;
+  text-shadow: 0 3px 4px black;
+  padding-top: 20px;
+}
+
+.pizza-form h1 {
+  text-align: center;
 }
 
 #order-form {
   margin: 1% 5%;
   width: 30%;
 }
-/*#dough-pic {
-  background-image: url("../img/pizza-dough.jpeg");
-  height: 300px;
-  width: 225px;
-}*/
 
 .form-control {
   margin-bottom: 10px;
@@ -94,6 +104,7 @@ label {
   width: 50%;
   margin: auto;
   color: black;
+  text-shadow: none;
 }
 
 #pay-form {
@@ -111,4 +122,12 @@ label {
   display: none;
   font-style: italic;
   font-size: 12px;
+}
+
+.alert {
+  text-shadow: none;
+}
+
+img {
+  margin: auto;
 }
