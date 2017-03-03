@@ -16,18 +16,38 @@
 }
 
 #pics {
-  height: 500px;
+  margin-top: 40px;
+}
+
+.mid-section {
+  height: 400px;
+  margin-bottom: 10px;
 }
 
 .row {
   text-align: center;
 }
 
-.col-md-3 {
-  border: 1px solid black;
-  width: 30%;
-  margin: auto;
+.left-col {
+  text-align: right;
 }
+
+.right-col {
+  text-align: left;
+}
+
+.pizza-form {
+  background-color: lightgray;
+}
+
+#order-form {
+  margin: 1% 5%;
+}
+/*#dough-pic {
+  background-image: url("../img/pizza-dough.jpeg");
+  height: 300px;
+  width: 225px;
+}*/
 
 .form-control {
   margin-bottom: 10px;
@@ -50,6 +70,8 @@ label {
   display: none;
   font-size: 20px;
   text-align: center;
+  width: 50%;
+  margin: auto;
 }
 
 .sm-md-toppings, .lrg-toppings{
