@@ -1,5 +1,32 @@
 .jumbotron {
   text-align: center;
+  background-image: url("../img/pizza-background-1.png");
+  background-position: bottom;
+  background-attachment: fixed;
+  color: white;
+  height: 400px;
+}
+.jumbotron h1 {
+  padding-top: 100px;
+  width: 30%;
+  text-align: left;
+  margin: auto;
+  color: white;
+  text-shadow: 0 4px 9px black;
+}
+
+#pics {
+  height: 500px;
+}
+
+.row {
+  text-align: center;
+}
+
+.col-md-3 {
+  border: 1px solid black;
+  width: 30%;
+  margin: auto;
 }
 
 .form-control {
@@ -23,4 +50,10 @@ label {
   display: none;
   font-size: 20px;
   text-align: center;
+}
+
+.sm-md-toppings, .lrg-toppings{
+  display: none;
+  font-style: italic;
+  font-size: 12px;
 }

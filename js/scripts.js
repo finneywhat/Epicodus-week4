@@ -45,9 +45,18 @@ $(function(){
 
     if (!userSizeSelection) {
       $("#error").show();
+      $(".sm-md-toppings").hide();
+      $(".lrg-toppings").hide();
       $("#order-results").hide();
+    } else if (userSizeSelection === 10 || userSizeSelection === 13) {
+      $("#error").hide();
+      $(".sm-md-toppings").show();
+      $(".lrg-toppings").hide();
+      $("#order-results").show();
     } else {
       $("#error").hide();
+      $(".sm-md-toppings").hide();
+      $(".lrg-toppings").show();
       $("#order-results").show();
     }
 
