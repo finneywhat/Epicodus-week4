@@ -14,7 +14,7 @@ pizzaOrder.prototype.pizzaPrice = function() {
     this.veggies = this.veggies.length * 1;
     this.meats = this.meats.length * 1.5;
   }
-  return this.size + this.veggies + this.meats;
+  return (this.size + this.veggies + this.meats).toFixed(2);
 }
 
 // Front-end (User Interface)
@@ -41,7 +41,16 @@ $(function(){
     var pizza = new pizzaOrder(userSizeSelection, vegToppings, meatToppings);
     console.log(pizza);
     var totalPrice = pizza.pizzaPrice();
-    console.log(totalPrice);
+    $("#user-pizza-price").text(totalPrice);
 
+    if (!userSizeSelection) {
+      $("#error").show();
+      $("#order-results").hide();
+    } else {
+      $("#error").hide();
+      $("#order-results").show();
+    }
+
+    $("#order-form").change();
   });
 });
