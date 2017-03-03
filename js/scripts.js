@@ -1,44 +1,29 @@
-// var price = 0;
-var vegToppings = [];
-var meatToppings = [];
+// Back-end (Business Logic)
 
 function pizzaOrder(size, veggies, meats) {
   this.size = size;
   this.veggies = veggies;
-  this.meats = veggies;
+  this.meats = meats;
 }
 
 pizzaOrder.prototype.pizzaPrice = function() {
-  return this.size + (this.veggies.length * 1) + (this.meats.length * 2)
+  if (this.size === 15) {
+    this.veggies = this.veggies.length * 1.5;
+    this.meats = this.meats.length * 2.5;
+  } else {
+    this.veggies = this.veggies.length * 1;
+    this.meats = this.meats.length * 1.5;
+  }
+  return this.size + this.veggies + this.meats;
 }
 
-// pizzaOrder.prototype.sizePrice = function() {
-//   if (this.size === "small") {
-//     price += 10;
-//   } else if (this.size === "medium") {
-//     price += 13;
-//   } else {
-//     price += 15;
-//   }
-//   return price;
-// }
-//
-// pizzaOrder.prototype.veggiePrice = function() {
-//   price = price + (this.veggies * 1);
-//   return price;
-// }
-//
-// pizzaOrder.prototype.meatPrice = function() {
-//   price = price + (this.meats * 2);
-//   return price;
-// }
-
+// Front-end (User Interface)
 $(function(){
   $("#order-form").submit(function(){
     event.preventDefault();
 
     var userSizeSelection = parseInt($("#size").val());
-    console.log(userSizeSelection);
+
     var vegToppings = [];
     $("input:checkbox[name=veggie-toppings]:checked").each(function(){
     vegToppings.push($(this).val());
@@ -55,7 +40,8 @@ $(function(){
 
     var pizza = new pizzaOrder(userSizeSelection, vegToppings, meatToppings);
     console.log(pizza);
-    // var totalPrice = (pizza.pizzaPrice)
+    var totalPrice = pizza.pizzaPrice();
+    console.log(totalPrice);
 
   });
 });
