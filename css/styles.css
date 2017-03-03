@@ -1,0 +1,16 @@
+.jumbotron {
+  text-align: center;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+#order-form p {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+label {
+  font-size: 16px;
+}

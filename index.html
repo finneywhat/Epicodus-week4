@@ -8,8 +8,39 @@
     <title>Pizza, please</title>
   </head>
   <body>
+    <div class="container-flex">
+      <div class="jumbotron">
+        <h1>Pizza, Please and Thank You</h1>
+        <p>
+          Piping hot pizza's just a click away
+        </p>
+      </div>
+    </div>
     <div class="container">
-      
+      <form id="order-form">
+        <label for="size">First step: select a size</label>
+        <select class="form-control">
+          <option type="checkbox" name="pizza-size" value=""><br>
+          <option type="checkbox" name="pizza-size" value="small">  Small (9")<br>
+          <option type="checkbox" name="pizza-size" value="medium">  Medium (12")<br>
+          <option type="checkbox" name="pizza-size" value="large">  Large (16")<br>
+        </select>
+        <div class="form-group">
+          <p>Next step: select your desired veggie toppings</p>
+            <input type="checkbox" name="veggie-toppings" value="peppers">  Peppers<br>
+            <input type="checkbox" name="veggie-toppings" value="onions">  Onions<br>
+            <input type="checkbox" name="veggie-toppings" value="mushrooms">  Mushrooms<br>
+            <input type="checkbox" name="veggie-toppings" value="olives">  Olives<br>
+        </div>
+        <div class="form-group">
+          <p>Last step: select your meat toppings</p>
+          <input type="checkbox" name="meat-toppings" value="pepperoni">  Pepperoni<br>
+          <input type="checkbox" name="meat-toppings" value="sausage">  Sausage<br>
+          <input type="checkbox" name="meat-toppings" value="chicken">  Chicken<br>
+          <input type="checkbox" name="meat-toppings" value="bacon">  Bacon<br>
+        </div>
+       <button type="submit" class="btn btn-primary">Click to order</button>
+      </form>
     </div>
   </body>
 </html>
