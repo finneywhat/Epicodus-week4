@@ -3,8 +3,7 @@
   background-image: url("../img/pizza-background-1.png");
   background-position: bottom;
   background-attachment: fixed;
-  color: white;
-  height: 400px;
+  height: 420px;
 }
 .jumbotron h1 {
   padding-top: 100px;
@@ -15,9 +14,14 @@
   text-shadow: 0 4px 9px black;
 }
 
-#pics {
-  margin-top: 40px;
+h4 {
+  color: white;
+  text-shadow: 0 4px 6px black;
 }
+
+/*#pics {
+  margin-top: 40px;
+}*/
 
 .mid-section {
   height: 400px;
@@ -26,6 +30,11 @@
 
 .row {
   text-align: center;
+  margin-bottom: 80px;
+}
+
+.row h1 {
+  margin-bottom: 40px;
 }
 
 .left-col {
@@ -36,12 +45,19 @@
   text-align: left;
 }
 
+.description {
+  width: 100%;
+}
+
 .pizza-form {
-  background-color: lightgray;
+  background-image: url("../img/pizza-background-1.png");
+  background-position: top;
+  color: white;
 }
 
 #order-form {
   margin: 1% 5%;
+  width: 30%;
 }
 /*#dough-pic {
   background-image: url("../img/pizza-dough.jpeg");
@@ -62,6 +78,11 @@ label {
   font-size: 16px;
 }
 
+.pay-info {
+  font-weight: normal;
+  font-size: 14px;
+}
+
 #error {
   display: none;
 }
@@ -72,6 +93,18 @@ label {
   text-align: center;
   width: 50%;
   margin: auto;
+  color: black;
+}
+
+#pay-form {
+  display: none;
+  margin: 1% 8%;
+  width: 30%;
+}
+
+#payment-info {
+  text-align: center;
+  font-size: 24px;
 }
 
 .sm-md-toppings, .lrg-toppings{

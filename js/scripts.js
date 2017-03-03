@@ -28,15 +28,13 @@ $(function(){
     $("input:checkbox[name=veggie-toppings]:checked").each(function(){
     vegToppings.push($(this).val());
     return vegToppings;
-  });
-    console.log(vegToppings);
+    });
 
     var meatToppings = [];
     $("input:checkbox[name=meat-toppings]:checked").each(function(){
     meatToppings.push($(this).val());
     return meatToppings;
     });
-    console.log(meatToppings);
 
     var pizza = new pizzaOrder(userSizeSelection, vegToppings, meatToppings);
     console.log(pizza);
@@ -61,5 +59,19 @@ $(function(){
     }
 
     $("#order-form").change();
+    window.scrollTo(0, 3000);
+
+  });
+
+  $("#pay-btn").click(function(){
+    $("#order-form").fadeOut(600);
+    $("#pay-form").fadeIn(3000);
+    $("#order-results").fadeOut(600);
+    // $("#output-text-pay").show();
+    // $("#priceOfTicket2").text(ticketOutput);
+  });
+
+  $("#reload").click(function(){
+    location.reload();
   });
 });
