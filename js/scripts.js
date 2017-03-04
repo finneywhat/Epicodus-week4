@@ -37,7 +37,7 @@ $(function(){
     });
 
     var pizza = new pizzaOrder(userSizeSelection, vegToppings, meatToppings);
-    console.log(pizza);
+
     var totalPrice = pizza.pizzaPrice();
     $("#user-pizza-price1").text(totalPrice);
     $("#user-pizza-price").text(totalPrice);
@@ -56,8 +56,8 @@ $(function(){
     } else if (userSizeSelection === 13) {
       $("#user-size").text("medium");
       $("#error").hide();
-      $(".sm-md-toppings").hide();
-      $(".lrg-toppings").show();
+      $(".sm-md-toppings").show();
+      $(".lrg-toppings").hide();
       $("#order-results").show();
     } else {
       $("#user-size").text("large");
@@ -74,10 +74,8 @@ $(function(){
 
   $("#pay-btn").click(function(){
     $("#order-form").fadeOut(600);
-    $("#pay-form").fadeIn(3000);
     $("#order-results").fadeOut(600);
-    // $("#output-text-pay").show();
-    // $("#priceOfTicket2").text(ticketOutput);
+    $("#pay-form").fadeIn(2500);
   });
 
   $("#reload").click(function(){

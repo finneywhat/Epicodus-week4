@@ -4,6 +4,7 @@
   background-position: bottom;
   background-attachment: fixed;
   height: 420px;
+  margin: 0px;
 }
 .jumbotron h1 {
   padding-top: 100px;
@@ -13,23 +14,21 @@
   text-shadow: 0 4px 9px black;
 }
 
+#pics {
+  padding-bottom: 50px;
+}
+
 h4 {
   color: white;
   text-shadow: 0 4px 6px black;
 }
 
-.mid-section {
-  height: 500px;
-  margin-bottom: 10px;
-}
-
 .row {
   text-align: center;
-  margin-bottom: 80px;
 }
 
 .row h1 {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .left-col {
@@ -40,27 +39,31 @@ h4 {
   text-align: left;
 }
 
+#full-width {
+  width: 90%;
+  margin-left: 10%;
+}
+
 .mid-row {
   background-image: url("../img/wood.jpeg");
   background-position: right;
-  margin-top: 40px;
-  padding: 100px 0;
+  /*margin-top: 40px;*/
+  padding: 50px 0;
   color: black;
 }
 
 #last-row {
-  margin-top: 100px;
-  padding: 90px 0;
+  padding: 50px 0;
 }
 
 .description {
   width: 80%;
-  margin-top: 50px;
 }
 
 .pizza-form {
   background-image: url("../img/pizza-background-1.png");
-  background-position: top;
+  background-attachment: fixed;
+  background-position: top left;
   color: white;
   text-shadow: 0 3px 4px black;
   padding-top: 20px;
@@ -109,7 +112,7 @@ label {
 
 #pay-form {
   display: none;
-  margin: 1% 8%;
+  margin: 1% 5%;
   width: 30%;
 }
 
