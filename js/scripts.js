@@ -42,6 +42,13 @@ $(function(){
     $("#user-pizza-price1").text(totalPrice);
     $("#user-pizza-price").text(totalPrice);
 
+    var showResults = function() {
+      $("#error").hide();
+      $(".sm-md-toppings").show();
+      $(".lrg-toppings").hide();
+      $("#order-results").show();
+    }
+
     if (!userSizeSelection) {
       $("#error").show();
       $(".sm-md-toppings").hide();
@@ -49,16 +56,10 @@ $(function(){
       $("#order-results").hide();
     } else if (userSizeSelection === 10) {
       $("#user-size").text("small");
-      $("#error").hide();
-      $(".sm-md-toppings").show();
-      $(".lrg-toppings").hide();
-      $("#order-results").show();
+      showResults();
     } else if (userSizeSelection === 13) {
       $("#user-size").text("medium");
-      $("#error").hide();
-      $(".sm-md-toppings").show();
-      $(".lrg-toppings").hide();
-      $("#order-results").show();
+      showResults();
     } else {
       $("#user-size").text("large");
       $("#error").hide();
