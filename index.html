@@ -5,28 +5,40 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.3.0/typeit.min.js"></script>
     <script src="js/scripts.js"></script>
      <link rel="icon" href="img/favicon.ico">
-    <title>Pizza please</title>
+    <title>Pizza Thyme</title>
   </head>
   <body>
+    <div class="up-down" id="header">
+      <ul>
+        <li>&copy; Chris Finney</li>
+        <li>ticidunt</li>
+        <li>dolor</li>
+        <li>ipsum</li>
+        <li>lorem</li>
+        <h4>Pizza Thyme <span class="copyright">&reg;</span></h4>
+      </ul>
+    </div>
     <div class="container-flex">
-      <div class="jumbotron">
+      <div class="jumbotron" >
+        <p id="slogan-typeit"></p>
         <h1>Pizza Thyme</h1>
-        <h4>
-          Piping hot pizza is just a few clicks away
-        </h4>
       </div>
     </div>
 
-    <div class="container-fluid mid-section" id="pics">
+    <div class="container-fluid" id="pics">
       <div class="row">
-        <h1>We use only the freshest ingredients for our pizzas</h1>
+        <h1>We serve only the freshest ingredients</h1>
         <div class="col-md-6 left-col">
-          <img src="img/pizza-dough.jpeg" alt="pizza dough" />
+          <img src="img/pizza-dough-slate.jpg" alt="pizza dough" id="dough"/>
         </div>
         <div class="col-md-6 right-col">
-          <h3 class="description">Our dough starts as local Oregon golden wheat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</h3>
+          <h3 class="description"><br>We've partnered with an amazing local wheat farm, so you know our dough is so pro. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.<br>
+          <br>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </h3>
         </div>
       </div>
     </div>
@@ -34,65 +46,76 @@
     <div class="container-fluid mid-section">
       <div class="row mid-row">
         <div class="col-md-6 left-col">
-          <h3 class="description" id="full-width">Vegetables fresh from our backyard garden are the only we serve. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h3>
+          <hr>
+          <h3 class="description" id="full-width">Vegetables fresh from our backyard garden are the only we serve. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<br>
+          <br>
+          Vegetables fresh from our backyard garden are the only we serve. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.<br>
+          <br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </h3>
+        <hr>
         </div>
         <div class="col-md-6 right-col">
-          <img src="img/veggie-toppings.jpg" alt="pizza toppings" />
         </div>
       </div>
     </div>
 
-    <div class="container-fluid mid-section" id="last-row">
+    <div class="container-fluid mid-section mid" id="last-row">
       <div class="row">
         <div class="col-md-6 left-col">
-          <img src="img/meat-toppings.jpg" alt="meat toppings" />
+          <img src="img/logo.png" alt="organic farm" />
         </div>
         <div class="col-md-6 right-col">
-          <h3 class="description">Local Oregon cruelty-free farms supply us with choiice cuts. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</h3>
+          <h3 class="description"><br>Local Oregon farms supply us with grass-fed, premium cuts. Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br><br>Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea in.<br><br>Saute irure dolor in.</h3>
         </div>
       </div>
     </div>
 
-    <div class="container-fluid pizza-form">
+    <div class="container-fluid pizza-form bottom-shadow">
       <h1>Online Pizza Order</h1>
-      <form id="order-form">
-        <label for="size">First step: select a size</label>
-        <select class="form-control" id="size">
-          <option value=""><br>
-          <option value=10>  Small (9") - $10<br>
-          <option value=13>  Medium (12") - $13<br>
-          <option value=15>  Large (16") - $15<br>
-        </select>
-        <div class="form-group">
-          <p>Next step: select your desired veggie toppings</p>
-          <h6 class="sm-md-toppings">
-            Additional veggie toppings are $1.00/each
-          </h6>
-          <h6 class="lrg-toppings">
-            Additional veggie toppings are $1.50/each
-          </h6>
-            <input type="checkbox" name="veggie-toppings" value="peppers">  Peppers<br>
-            <input type="checkbox" name="veggie-toppings" value="onions">  Onions<br>
-            <input type="checkbox" name="veggie-toppings" value="garlic">  Garlic<br>
-            <input type="checkbox" name="veggie-toppings" value="mushrooms">  Mushrooms<br>
-            <input type="checkbox" name="veggie-toppings" value="olives">  Olives<br>
-            <input type="checkbox" name="veggie-toppings" value="artichoke">  Artichoke<br>
-        </div>
-        <div class="form-group">
-          <p>Last step: select your meat toppings</p>
-          <h6 class="sm-md-toppings">
-            Additional meat toppings are $1.50/each
-          </h6>
-          <h6 class="lrg-toppings">
-            Additional meat toppings are $2.50/each
-          </h6>
-          <input type="checkbox" name="meat-toppings" value="pepperoni">  Pepperoni<br>
-          <input type="checkbox" name="meat-toppings" value="sausage">  Sausage<br>
-          <input type="checkbox" name="meat-toppings" value="chicken">  Chicken<br>
-          <input type="checkbox" name="meat-toppings" value="bacon">  Bacon<br>
-        </div>
-       <button type="submit" class="btn btn-primary">Click to order</button>
-      </form>
+      <div class="col-md-6">
+        <form id="order-form">
+          <label for="size">Select a size</label>
+          <select class="form-control" id="size">
+            <option value=""><br>
+            <option value=10>  Small (9") - $10<br>
+            <option value=13>  Medium (12") - $13<br>
+            <option value=15>  Large (16") - $15<br>
+          </select>
+          <div class="form-group" id="veggie-toppings">
+            <p>Select your veggie toppings</p>
+            <h6 class="sm-md-toppings">
+              Veggie toppings are $1.00/each
+            </h6>
+            <h6 class="lrg-toppings">
+              Veggie toppings are $1.50/each
+            </h6>
+              <input type="checkbox" name="veggie-toppings" value="peppers">  Peppers<br>
+              <input type="checkbox" name="veggie-toppings" value="onions">  Onions<br>
+              <input type="checkbox" name="veggie-toppings" value="garlic">  Garlic<br>
+              <input type="checkbox" name="veggie-toppings" value="mushrooms">  Mushrooms<br>
+              <input type="checkbox" name="veggie-toppings" value="olives">  Olives<br>
+              <input type="checkbox" name="veggie-toppings" value="artichoke">  Artichoke<br>
+          </div>
+          <div class="form-group" id="toppings">
+            <p>Select your meat toppings</p>
+            <h6 class="sm-md-toppings">
+              Meat toppings are $1.50/each
+            </h6>
+            <h6 class="lrg-toppings">
+              Meat toppings are $2.50/each
+            </h6>
+            <input type="checkbox" name="meat-toppings" value="pepperoni">  Pepperoni<br>
+            <input type="checkbox" name="meat-toppings" value="sausage">  Sausage<br>
+            <input type="checkbox" name="meat-toppings" value="chicken">  Chicken<br>
+            <input type="checkbox" name="meat-toppings" value="bacon">  Bacon<br>
+          </div>
+         <button type="submit" class="btn btn-primary" id="order-btn" value="Click">Add to order
+         </button>
+         <button type="button" class="btn btn-warning" id="clear-btn">Clear order
+         </button>
+        </form>
+      </div>
       <form id="pay-form">
         <label for="size" id="payment-info">Payment Information</label>
         <p>Your total today is $<span id="user-pizza-price"></span></p>
@@ -115,14 +138,40 @@
         <button type="button" class="btn btn-success" id="reload" onclick="reload()">Start Order Over</button>
       </form>
       <br>
-        <div class="alert alert-danger" role="alert" id="error">Our crystal ball is currently in the shop for repairs. Please enter a size so we can get started on your order. Thanks!
+      <div class="col-md-6" class="well">
+        <div id="order-results">
+          <p>
+            Thank you for your order.</p>
+            <hr><br>
+            <ul class="pizza-list">
+
+            </ul>
+            <span id="user-size"><a> pizza</a></span>
+            <span id="user-pizza-price1"></span>
+
+          <ul id="pizza-toppings-list">
+
+          </ul>
+          <hr>
+          <p>
+            Total:<span id="total-price"></span>
+          </p>
+          <button type="button" class="btn btn-success" id="pay-btn">Pay Now</button>
+          <button type="button" class="btn btn-info" id="another-pizza-btn">Another Pizza</button>
         </div>
-      <div id="order-results" class="well">
-        <p>
-          Thank you for your order.<br>The total price for your <span id="user-size"></span> pizza is $<span id="user-pizza-price1"></span>.
-        </p>
-        <button type="button" class="btn btn-success" id="pay-btn">Pay Now</button>
+        <div class="alert alert-danger" role="alert" id="error">Sorry, our crystal ball is currently in the shop for repairs.<br>Please enter a size so we can get started on your order. Thanks!
+        </div>
       </div>
+    </div>
+    <div class="up-down">
+      <ul>
+        <li>&copy; Chris Finney</li>
+        <li>ticidunt</li>
+        <li>dolor</li>
+        <li>ipsum</li>
+        <li>lorem</li>
+        <h4>Pizza Thyme <span class="copyright">&reg;</span></h4>
+      </ul>
     </div>
   </body>
 </html>
