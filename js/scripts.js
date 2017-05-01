@@ -65,7 +65,7 @@ $(function(){
       total += price;
     };
 
-    $(".pizza-list").append("<li><span class='user-size'><a>" + pizza.getName() + " | " + (vegToppings.length + meatToppings.length) + " toppings" + "</a></span>" +
+    $(".pizza-list, .modal-order-info").append("<li><span class='user-size'><a>" + pizza.getName() + " | " + (vegToppings.length + meatToppings.length) + " toppings" + "</a></span>" +
     "<span class='user-pizza-price1'>$" + price.toFixed(2) + "</span><ul class='toppings'>" + pizza.listVegToppings(vegToppings) + pizza.listMeatToppings(meatToppings) + "</ul>"
     );
 
@@ -76,11 +76,9 @@ $(function(){
       $(this).find('ul.toppings > li').slideToggle();
     });
 
-      // vegToppings.forEach(function(vegTopping) {
-      //   $('.pizza-toppings-list').append("<li>" + vegTopping + "</li>");
-      // }) + meatToppings.forEach(function(meatTopping){
-      //   $('.pizza-toppings-list').append("<li>" + meatTopping + "</li>");
-      // }) + "</ul>"
+    $('ul.modal-order-info > li').last().click(function(){
+      $(this).find('ul.toppings > li').slideToggle();
+    });
 
     var showResults = function() {
       $("#error").hide();
@@ -121,17 +119,33 @@ $(function(){
     $("#order-form").fadeIn(600);
   });
 
-$('#slogan-typeit').typeIt({
-     strings: ["Anytime's Pizza Thyme", "Eatsa some pizza", "Oh man, I'm getting hungry", "I should probably scroll down", "Maybe order a pizza"],
-     loop: true,
-     speed: 200,
-     breakLines: false,
-     autoStart: true,
-});
+  $('#slogan-typeit').typeIt({
+       strings: ["Anytime's Pizza Thyme", "Eatsa some pizza", "Oh man, I'm getting hungry", "I should probably scroll down", "Maybe order a pizza"],
+       loop: true,
+       speed: 200,
+       breakLines: false,
+       autoStart: true,
+  });
+
+  $("#delivery-option").click(function(){
+    $('#order-results').fadeOut();
+  });
+
+  $("#close-modal").click(function(){
+    $('#order-results').fadeIn();
+  });
+
+  $("#delivery").click(function() {
+    $("#delivery-form").slideToggle();
+  });
+
+  $("#pick-up").click(function() {
+    $(".pick-up-instructions").slideToggle();
+  });
 
   $("#pay-btn").click(function(){
     $("#order-form").fadeOut(600);
-    $("#order-results").fadeOut(1000);
+    // $("#order-results").hide();
     $("#pay-form").fadeIn(600);
   });
 

@@ -171,7 +171,7 @@ input {
   background-color: white;
   /*opacity: .9;*/
   padding: 20px;
-  box-shadow: 2px 4px 8px black;
+  box-shadow: 0 4px 8px black;
   /*border-radius: 10px;*/
 }
 
@@ -211,8 +211,7 @@ input {
 }
 
 #pay-btn {
-  width: 40%;
-  margin-left: 10%;
+  width: 20%;
 }
 
 #another-pizza-btn {
@@ -268,6 +267,30 @@ input {
   list-style: none;
 }
 
-/*.pizza-list ul > li {
+#delivery:hover,
+#pick-up:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+#delivery-form {
   display: none;
-}*/
+}
+
+.pick-up-instructions {
+  display: none;
+}
+
+@media screen and (max-width: 998px) {
+  .jumbotron h1 {
+    font-size: 80px;
+  }
+
+  .pizza-form h1 {
+    font-size: 35px;
+  }
+
+  html {
+    font-size: 10px;
+  }
+}
