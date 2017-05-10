@@ -13,11 +13,9 @@
 
 ## Setup
 
-* Clone this repository
+* In the terminal, type `git clone https://github.com/finneywhat/Epicodus-week4.git`
 
-* Navigate to the bank-account directory using finder or the terminal
-
-* Open index.html
+* Type `open index.html` to open in browser.
 
 ## Specs
 
